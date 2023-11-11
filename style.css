@@ -3,7 +3,7 @@
 *::before {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.35em;
+  font-size: 1.2em;
 }
 
 body {
@@ -20,8 +20,8 @@ body {
 
 .top,
 .bottom,
-.flip-card.flip::before,
-.flip-card.flip::after {
+.flip-card .top-flip,
+.flip-card .bottom-flip {
   height: 0.75em;
   line-height: 1;
   padding: 0.25em;
@@ -29,7 +29,7 @@ body {
 }
 
 .top,
-.flip-card.flip::before {
+.flip-card .top-flip {
   background-color: #f7f7f7;
   border-top-right-radius: 0.1em;
   border-top-left-radius: 0.1em;
@@ -37,7 +37,7 @@ body {
 }
 
 .bottom,
-.flip-card.flip::after {
+.flip-card .bottom-flip {
   background-color: white;
   display: flex;
   align-items: flex-end;
@@ -45,7 +45,7 @@ body {
   border-bottom-left-radius: 0.1em;
 }
 
-.flip-card.flip::before {
+.flip-card .top-flip {
   position: absolute;
   content: attr(data-current-number);
   width: 100%;
@@ -59,7 +59,7 @@ body {
   }
 }
 
-.flip-card.flip::after {
+.flip-card .bottom-flip {
   position: absolute;
   bottom: 0;
   content: attr(data-next-number);
@@ -73,4 +73,26 @@ body {
   100% {
     transform: rotateX(0deg);
   }
+}
+
+.container {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+.container-segment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  align-items: center;
+}
+
+.segment {
+  display: flex;
+  gap: 0.1em;
+}
+
+.segment-title {
+  font-size: 1rem;
 }
