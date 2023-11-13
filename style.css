@@ -122,23 +122,27 @@ body {
 
 .segment-one p {
   font-size: 15px;
+  margin-bottom: 30px;
 }
 
 .segment-one span {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
+  color: rgb(242, 31, 31);
 }
 
 .segment-two img {
-  width: 400px;
-  height: 300px;
+  width: 450px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .timer {
   display: flex;
-  gap: 0.7em;
+  gap: 1em;
   margin-bottom: 50px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .container-segment {
@@ -154,7 +158,9 @@ body {
 }
 
 .segment-title {
-  font-size: 1rem;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 button {
