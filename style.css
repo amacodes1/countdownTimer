@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=REM:wght@500&display=swap");
+
 *,
 *::after,
 *::before {
@@ -8,6 +10,7 @@
 body {
   background-color: #f2f1ed;
   color: #2c2929;
+  overflow: auto;
 }
 
 .flip-card {
@@ -79,16 +82,50 @@ body {
 .background,
 .segments {
   display: flex;
-  gap: 20em;
+  gap: 10em;
   justify-content: center;
 }
 
 .background {
-  margin: 10px;
   background-color: rgb(252, 233, 233);
   width: 2000px;
   height: 600px;
   align-items: center;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+  .container,
+  .background,
+  .segments {
+    flex-direction: column;
+  }
+
+  .background {
+    width: max-content;
+    height: max-content;
+  }
+
+  .segments {
+    gap: 2em;
+  }
+
+  .segment-one {
+    padding: 30px;
+  }
+
+  .segment-one h1::before {
+    width: 50px;
+  }
+
+  .segment-two img {
+    width: 100px;
+    height: auto;
+    padding: 20px;
+  }
 }
 
 .segments {
@@ -101,7 +138,7 @@ body {
 
 .segment-one h1 {
   font-style: italic;
-  font-family: cursive;
+  font-family: "Kanit", sans-serif;
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 38px;
@@ -121,8 +158,9 @@ body {
 }
 
 .segment-one p {
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 30px;
+  font-family: "REM", sans-serif;
 }
 
 .segment-one span {
@@ -161,6 +199,7 @@ body {
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
+  color: rgb(201, 3, 3);
 }
 
 button {
@@ -170,4 +209,9 @@ button {
   background-image: linear-gradient(to right, deeppink, red, magenta);
   color: white;
   font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-image: linear-gradient(to right, red, rgb(101, 247, 101), magenta);
 }
